@@ -1,5 +1,5 @@
-let name = 'Alex';
-name = 'Alejandro';
+let firstname = 'Alex';
+firstname = 'Alejandro';
 
 const lastname = 'Rodríguez';
 // lastname = 'Martínez';
@@ -10,4 +10,5 @@ if (condition) {
   console.log(lastname);
 }
 
-console.log('Hola Mundo!!! ' + name + ' ' + lastname);
+console.log(`Hola Mundo!!!
+${firstname} - ${lastname}`);
