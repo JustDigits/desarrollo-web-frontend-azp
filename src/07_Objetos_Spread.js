@@ -42,14 +42,17 @@ const carro = {
   },
 };
 
-if (carro.lugarProcedencia != undefined && carro.lugarProcedencia.name) {
-  console.log('Cumple');
-} else {
-  console.log('No existe lugar de procedencia');
-}
+console.log(carro);
 
-console.log(carro.lugarProcedencia);
+// Misma referencia
+// const carro2 = carro;
 
-// console.log(carro.lugarProcedencia.name);
-// console.log(carro.lugarProcedencia?.name);
-// console.log(carro.marca?.municipio?.name);
+// Operador spread
+const carro2 = { ...carro };
+const valida = carro2 === carro;
+
+console.log(valida);
+
+carro2.id = 20;
+console.log(carro.id);
+console.log(carro2.id);
