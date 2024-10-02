@@ -1,67 +1,10 @@
-const carros = [
-  {
-    id: 1,
-    marca: 'Seat',
-    modelo: 'Fr',
-    anio: 2018,
-    nombre: 'Leon',
-    client: {
-      name: 'Gustavoo',
-      apellido: 'Rodriguez',
-    },
-  },
-  {
-    id: 2,
-    marca: 'Seat',
-    modelo: 'Excellence',
-    anio: 2018,
-    nombre: 'Arona',
-    client: {
-      name: 'Gustavo',
-      apellido: 'Rodriguez',
-    },
-  },
-  {
-    id: 3,
-    marca: 'Cupra',
-    modelo: 'Cupra',
-    anio: 2018,
-    nombre: 'Ateca',
-    client: {
-      name: 'Gustavo',
-      apellido: 'Rodriguez',
-    },
-  },
-  {
-    id: 4,
-    marca: 'Cupra',
-    modelo: 'Cupra',
-    anio: 2018,
-    nombre: 'Formentor',
-    client: {
-      name: 'Gustavo',
-      apellido: 'Rodriguez',
-    },
-  },
-  {
-    id: 5,
-    marca: 'Cupra',
-    modelo: 'Electrico',
-    anio: 2018,
-    nombre: 'Moto',
-    client: {
-      name: 'Gustavo',
-      apellido: 'Rodriguez',
-    },
-  },
-];
+import { carros, carroPorNombre } from './data/carros';
 
 console.log(carros);
 
-const carroPorNombre = carros.find((i) => i.client.name === 'Gustavo');
-console.log(carroPorNombre);
+console.log('Carro por nombre:');
+console.log(carroPorNombre('Gustavoo'));
 
-// const carroFilter = carros.filter((i) => i.id !== '1');
 const carroFilter = carros.filter((i) => i.id !== 1);
 console.log(carroFilter);
 
