@@ -1,15 +1,13 @@
-const carros = ['Ferrari', 'Nissan', 'Porsche', 'McLaren', 'Mercedes'];
-carros.push('Mustang GT500', 'Challenger', 'Camaro');
+const carro = {
+  marca: 'Seat',
+  modelo: 'Fr',
+  anio: 2018,
+  nombre: 'Leon',
+};
 
-const motos = ['Italika', 'Chopper', 'Ninja', 'SuperSport'];
+// const { marcas, modelo, nombre } = carro;
+// console.log(marcas);
 
-const tienda = [...motos, ...carros, 'rin 18'];
-
-console.log(carros);
-console.log(tienda);
-
-// const carros2 = carros.concat('Mustang GT500', 'Challenger', 'Camaro');
-// const tienda2 = motos.concat(carros2).concat('rin 18');
-
-// console.log(carros2);
-// console.log(tienda2);
+const { marca, modelo, nombre } = carro;
+console.log(marca);
+console.log(nombre);
