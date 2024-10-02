@@ -1,7 +1,65 @@
-const alumnos = ['Monse', 'Mau', 'Gustavo', 'Jose', 'Barbara', 'Juan'];
+const carros = [
+  {
+    marca: 'Seat',
+    modelo: 'Fr',
+    anio: 2018,
+    nombre: 'Leon',
+    client: {
+      name: 'Gustavo',
+      apellido: 'Rodriguez',
+    },
+  },
+  {
+    marca: 'Seat',
+    modelo: 'Excellence',
+    anio: 2018,
+    nombre: 'Arona',
+    client: {
+      name: 'Gustavo',
+      apellido: 'Rodriguez',
+    },
+  },
+  {
+    marca: 'Cupra',
+    modelo: 'Cupra',
+    anio: 2018,
+    nombre: 'Ateca',
+    client: {
+      name: 'Gustavo',
+      apellido: 'Rodriguez',
+    },
+  },
+  {
+    marca: 'Cupra',
+    modelo: 'Cupra',
+    anio: 2018,
+    nombre: 'Formentor',
+    client: {
+      name: 'Gustavo',
+      apellido: 'Rodriguez',
+    },
+  },
+  {
+    marca: 'Cupra',
+    modelo: 'Electrico',
+    anio: 2018,
+    nombre: 'Moto',
+    client: {
+      name: 'Gustavo',
+      apellido: 'Rodriguez',
+    },
+  },
+];
 
-// const [nom1, nom2, nom3, , , nom6] = alumnos;
-// console.log(nom1, nom2, nom3, nom6);
+console.log(carros);
 
-const [nom1, nom2, nom3, ...nombres] = alumnos;
-console.log(nom1, nom2, nom3, ...nombres);
+const marcasCarros = carros.map((i) => {
+  return i.marca;
+});
+
+const nombresClientesCarros = carros.map((i) => {
+  return i.client.name;
+});
+
+console.log(marcasCarros);
+console.log(nombresClientesCarros);
