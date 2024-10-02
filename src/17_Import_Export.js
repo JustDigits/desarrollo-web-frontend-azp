@@ -1,7 +1,8 @@
-import carroPorNombre, { carros } from './data/carros';
+import { carros, carroPorNombre } from './data/carros';
 
 console.log(carros);
 
+// const carroPorNombre = (nombreCliente) => carros.find((i) => i.client.name === nombreCliente);
 console.log('Carro por nombre:');
 console.log(carroPorNombre('Gustavoo'));
 
