@@ -5,9 +5,10 @@ const carro = {
   nombre: 'Leon',
 };
 
-// const { marcas, modelo, nombre } = carro;
-// console.log(marcas);
+const detalle = ({ marca, modelo, nombre }) => {
+  console.log(
+    `El vehículo de la marca ${marca} es modelo ${modelo} y su nombre es ${nombre}`
+  );
+};
 
-const { marca, modelo, nombre } = carro;
-console.log(marca);
-console.log(nombre);
+detalle(carro);
