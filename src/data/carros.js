@@ -61,7 +61,7 @@ const carroPorNombre = (nombreCliente) => {
 };
 
 const carroPorId = (id) => {
-  return carros.filter((i) => i.id !== id);
+  return carros.find((i) => i.id === id);
 };
 
 export { carros, carroPorId, carroPorNombre as default };

@@ -2,12 +2,22 @@ import { carroPorId } from './data/carros';
 
 const promise = new Promise((resolve, reject) => {
   setTimeout(() => {
-    // console.log('Estamos esperando una promesa.');
+    // const test = carroPorId(2);
+    const test = carroPorId(10);
 
-    const test = carroPorId(2);
-    console.log(test);
+    if (test) {
+      resolve(test);
+    } else {
+      reject('Error> No se encontró el carro.');
+    }
   }, 3000);
 });
 
-// const test = carroPorId(2);
-// console.log(test);
+promise
+  .then((json) => {
+    console.log(json);
+    console.log('Realizado con éxito.');
+  })
+  .catch((error) => {
+    console.error(error);
+  });
