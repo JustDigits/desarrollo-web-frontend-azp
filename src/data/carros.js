@@ -64,4 +64,20 @@ const carroPorId = (id) => {
   return carros.find((i) => i.id === id);
 };
 
-export { carros, carroPorId, carroPorNombre as default };
+const findCarById = (id) => {
+  const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const test = carroPorId(id);
+
+      if (test) {
+        resolve(test);
+      } else {
+        reject('Error> No se encontró el carro.');
+      }
+    }, 3000);
+  });
+
+  return promise;
+};
+
+export { carros, carroPorId, findCarById, carroPorNombre as default };
