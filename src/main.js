@@ -1,12 +1,13 @@
-import carroPorNombre, { carros } from './data/carros';
+import { carroPorId } from './data/carros';
 
-console.log(carros);
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    // console.log('Estamos esperando una promesa.');
 
-console.log('Carro por nombre:');
-console.log(carroPorNombre('Gustavoo'));
+    const test = carroPorId(2);
+    console.log(test);
+  }, 3000);
+});
 
-const carroFilter = carros.filter((i) => i.id !== 1);
-console.log(carroFilter);
-
-const carroSome = carros.some((i) => i.client.name === 'Gustavvo');
-console.log(carroSome);
+// const test = carroPorId(2);
+// console.log(test);

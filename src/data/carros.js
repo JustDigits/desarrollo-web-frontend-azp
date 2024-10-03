@@ -60,4 +60,8 @@ const carroPorNombre = (nombreCliente) => {
   return carros.find((i) => i.client.name === nombreCliente);
 };
 
-export { carros, carroPorNombre as default };
+const carroPorId = (id) => {
+  return carros.filter((i) => i.id !== id);
+};
+
+export { carros, carroPorId, carroPorNombre as default };
