@@ -1,14 +1,8 @@
-const request = fetch('https://jsonplaceholder.typicode.com/users');
+const findAllUsers = async () => {
+  const response = await fetch('https://jsonplaceholder.typicode.com/users');
+  return await response.json();
+};
 
-// Equivalente a la línea de abajo
-/*request.then((response) => {
-  console.log(response);
-
-  response.json().then((data) => {
-    console.log(data);
-  });
-}); */
-
-request.then((response) => response.json()).then((data) => console.log(data));
-
+const users = await findAllUsers();
+console.log(users);
 console.log('Prueba de delay');
