@@ -1,11 +1,14 @@
-import { findCarById } from './data/carros';
+const request = fetch('https://jsonplaceholder.typicode.com/users');
 
-findCarById(10)
-// findCarById(3)
-  .then((json) => {
-    console.log(json);
-    console.log('Realizado con éxito.');
-  })
-  .catch((error) => {
-    console.error(error);
+// Equivalente a la línea de abajo
+/*request.then((response) => {
+  console.log(response);
+
+  response.json().then((data) => {
+    console.log(data);
   });
+}); */
+
+request.then((response) => response.json()).then((data) => console.log(data));
+
+console.log('Prueba de delay');
